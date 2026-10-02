@@ -6,23 +6,63 @@
     <title>Qualidade de Software</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <main class="container">
+
         <h1>Qualidade de Software</h1>
 
-        <p>
-            Projeto criado para demonstrar o uso de Git, GitHub
-            e controle de versionamento.
+        <p class="descricao">
+            Projeto criado para demonstrar o uso de Git, GitHub e controle de versionamento.
         </p>
-        <ul>
-    <li>Controle de versões</li>
-    <li>Histórico de alterações</li>
-    <li>Trabalho colaborativo</li>
-</ul>
 
-        <button>Saiba mais</button>
+        <div class="beneficios">
+            <span>✓ Controle de versões</span>
+            <span>✓ Histórico de alterações</span>
+            <span>✓ Trabalho colaborativo</span>
+        </div>
+
+        <section class="git-info">
+            <h2>Versionamento com Git</h2>
+
+            <p>
+                O Git ajuda a organizar alterações no projeto e manter
+                um histórico do desenvolvimento.
+            </p>
+
+            <strong>Commit • Branch • Push • Pull</strong>
+        </section>
+
+        <button class="botao" onclick="mostrarMais()">
+            Saiba mais
+        </button>
+
+        <div id="mais-info" class="mais-info">
+            <h3>Comandos básicos</h3>
+
+            <code>git add .</code>
+            <code>git commit -m "mensagem"</code>
+            <code>git push</code>
+            <code>git pull</code>
+        </div>
+
     </main>
+
+    <script>
+        function mostrarMais() {
+            const info = document.getElementById("mais-info");
+            const botao = document.querySelector(".botao");
+
+            info.classList.toggle("mostrar");
+
+            if (info.classList.contains("mostrar")) {
+                botao.textContent = "Mostrar menos";
+            } else {
+                botao.textContent = "Saiba mais";
+            }
+        }
+    </script>
 
 </body>
 </html>
